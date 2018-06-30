@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/apurvan/Projects/FinalCodes/AD9980Initialize/ml505_top.ncd
+OUTFILE=/home/apurvan/Projects/FinalCodes/AD9980Initialize/ml505_top.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/home/apurvan/Projects/FinalCodes/AD9980Initialize
+LICENSE=ISE
+USER_INFO=__0_0_0

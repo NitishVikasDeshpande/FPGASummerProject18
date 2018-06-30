@@ -1,0 +1,12 @@
+*.o
+*.swp
+*.log
+*~
+*.png
+*.avi
+build
+blob_analysis/blob_analysis
+cc_labeling/cc_labeling
+results
+viewwave
+

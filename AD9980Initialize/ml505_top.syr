@@ -1,0 +1,726 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: ml505_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ml505_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ml505_top"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : ml505_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "iic_init.v" in library work
+Compiling verilog file "Debouncer.v" in library work
+Module <iic_init> compiled
+Compiling verilog file "ml505_top.v" in library work
+Module <Debouncer> compiled
+Module <ml505_top> compiled
+No errors in compilation
+Analysis of file <"ml505_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ml505_top> in library <work>.
+
+Analyzing hierarchy for module <Debouncer> in library <work>.
+
+Analyzing hierarchy for module <iic_init> in library <work> with parameters.
+	ACK = "1"
+	BYTE_NUM = "11111"
+	CLK_FALL = "011"
+	CLK_RATE_MHZ = "00000000000000000000000000011011"
+	CLK_RISE = "101"
+	DATAI0 = "10100100"
+	DATAI1 = "00010100"
+	DATAI10 = "00000010"
+	DATAI11 = "00000000"
+	DATAI12 = "00000010"
+	DATAI13 = "00000000"
+	DATAI14 = "00000010"
+	DATAI15 = "00000000"
+	DATAI16 = "00000000"
+	DATAI17 = "10000000"
+	DATAI18 = "01010100"
+	DATAI19 = "00000000"
+	DATAI2 = "00000001"
+	DATAI20 = "10101000"
+	DATAI21 = "10000000"
+	DATAI22 = "00010000"
+	DATAI23 = "10001000"
+	DATAI24 = "00010000"
+	DATAI25 = "00000100"
+	DATAI26 = "00100000"
+	DATAI3 = "01000000"
+	DATAI4 = "00000000"
+	DATAI5 = "01000000"
+	DATAI6 = "00000000"
+	DATAI7 = "01000000"
+	DATAI8 = "00000000"
+	DATAI9 = "00110011"
+	IDLE = "000"
+	INIT = "001"
+	REG_ADDRI0 = "00011110"
+	REG_ADDRI1 = "00011111"
+	REG_ADDRI10 = "00001011"
+	REG_ADDRI11 = "00001100"
+	REG_ADDRI12 = "00001101"
+	REG_ADDRI13 = "00001110"
+	REG_ADDRI14 = "00001111"
+	REG_ADDRI15 = "00010000"
+	REG_ADDRI16 = "00011000"
+	REG_ADDRI17 = "00010010"
+	REG_ADDRI18 = "00000001"
+	REG_ADDRI19 = "00000010"
+	REG_ADDRI2 = "00100000"
+	REG_ADDRI20 = "00000011"
+	REG_ADDRI21 = "00000100"
+	REG_ADDRI22 = "00010010"
+	REG_ADDRI23 = "00010011"
+	REG_ADDRI24 = "00010100"
+	REG_ADDRI25 = "00011001"
+	REG_ADDRI26 = "00011010"
+	REG_ADDRI3 = "00000101"
+	REG_ADDRI4 = "00000110"
+	REG_ADDRI5 = "00000111"
+	REG_ADDRI6 = "00001000"
+	REG_ADDRI7 = "00001001"
+	REG_ADDRI8 = "00001010"
+	REG_ADDRI9 = "00011011"
+	SCK_PERIOD_US = "00000000000000000000000000011110"
+	SDA_BUFFER_MSB = "00000000000000000000000000011011"
+	SETUP = "100"
+	SLAVE_ADDRI = "1001100"
+	START = "010"
+	START_BIT = "1"
+	STOP_BIT = "0"
+	TRANSITION_CYCLE = "00000000000000000000000110010101"
+	TRANSITION_CYCLE_MSB = "00000000000000000000000000001011"
+	WAIT = "110"
+	WRITE = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ml505_top>.
+Module <ml505_top> is correct for synthesis.
+ 
+    Set user-defined property "BANDWIDTH =  OPTIMIZED" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKFBOUT_MULT =  24" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKFBOUT_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT0_DIVIDE =  8" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT0_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT0_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT1_DIVIDE =  1" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT1_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT1_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT2_DIVIDE =  1" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT2_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT2_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT3_DIVIDE =  1" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT3_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT3_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT4_DIVIDE =  1" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT4_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT4_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT5_DIVIDE =  1" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT5_DUTY_CYCLE =  0.500000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLKOUT5_PHASE =  0.000000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CLK_FEEDBACK =  CLKFBOUT" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "COMPENSATION =  SYSTEM_SYNCHRONOUS" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "DIVCLK_DIVIDE =  4" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "REF_JITTER =  0.100000" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "RESET_ON_LOSS_OF_LOCK =  FALSE" for instance <user_clk_pll> in unit <ml505_top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <user_clk_buf> in unit <ml505_top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <user_clk_buf> in unit <ml505_top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <user_clk_buf> in unit <ml505_top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <user_clk_buf> in unit <ml505_top>.
+Analyzing module <Debouncer> in library <work>.
+Module <Debouncer> is correct for synthesis.
+ 
+Analyzing module <iic_init> in library <work>.
+	ACK = 1'b1
+	BYTE_NUM = 5'b11111
+	CLK_FALL = 3'b011
+	CLK_RATE_MHZ = 32'sb00000000000000000000000000011011
+	CLK_RISE = 3'b101
+	DATAI0 = 8'b10100100
+	DATAI1 = 8'b00010100
+	DATAI10 = 8'b00000010
+	DATAI11 = 8'b00000000
+	DATAI12 = 8'b00000010
+	DATAI13 = 8'b00000000
+	DATAI14 = 8'b00000010
+	DATAI15 = 8'b00000000
+	DATAI16 = 8'b00000000
+	DATAI17 = 8'b10000000
+	DATAI18 = 8'b01010100
+	DATAI19 = 8'b00000000
+	DATAI2 = 8'b00000001
+	DATAI20 = 8'b10101000
+	DATAI21 = 8'b10000000
+	DATAI22 = 8'b00010000
+	DATAI23 = 8'b10001000
+	DATAI24 = 8'b00010000
+	DATAI25 = 8'b00000100
+	DATAI26 = 8'b00100000
+	DATAI3 = 8'b01000000
+	DATAI4 = 8'b00000000
+	DATAI5 = 8'b01000000
+	DATAI6 = 8'b00000000
+	DATAI7 = 8'b01000000
+	DATAI8 = 8'b00000000
+	DATAI9 = 8'b00110011
+	IDLE = 3'b000
+	INIT = 3'b001
+	REG_ADDRI0 = 8'b00011110
+	REG_ADDRI1 = 8'b00011111
+	REG_ADDRI10 = 8'b00001011
+	REG_ADDRI11 = 8'b00001100
+	REG_ADDRI12 = 8'b00001101
+	REG_ADDRI13 = 8'b00001110
+	REG_ADDRI14 = 8'b00001111
+	REG_ADDRI15 = 8'b00010000
+	REG_ADDRI16 = 8'b00011000
+	REG_ADDRI17 = 8'b00010010
+	REG_ADDRI18 = 8'b00000001
+	REG_ADDRI19 = 8'b00000010
+	REG_ADDRI2 = 8'b00100000
+	REG_ADDRI20 = 8'b00000011
+	REG_ADDRI21 = 8'b00000100
+	REG_ADDRI22 = 8'b00010010
+	REG_ADDRI23 = 8'b00010011
+	REG_ADDRI24 = 8'b00010100
+	REG_ADDRI25 = 8'b00011001
+	REG_ADDRI26 = 8'b00011010
+	REG_ADDRI3 = 8'b00000101
+	REG_ADDRI4 = 8'b00000110
+	REG_ADDRI5 = 8'b00000111
+	REG_ADDRI6 = 8'b00001000
+	REG_ADDRI7 = 8'b00001001
+	REG_ADDRI8 = 8'b00001010
+	REG_ADDRI9 = 8'b00011011
+	SCK_PERIOD_US = 32'sb00000000000000000000000000011110
+	SDA_BUFFER_MSB = 32'sb00000000000000000000000000011011
+	SETUP = 3'b100
+	SLAVE_ADDRI = 7'b1001100
+	START = 3'b010
+	START_BIT = 1'b1
+	STOP_BIT = 1'b0
+	TRANSITION_CYCLE = 32'sb00000000000000000000000110010101
+	TRANSITION_CYCLE_MSB = 32'sb00000000000000000000000000001011
+	WAIT = 3'b110
+	WRITE = 1'b0
+Module <iic_init> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "Debouncer.v".
+    Found 22-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Debouncer> synthesized.
+
+
+Synthesizing Unit <iic_init>.
+    Related source file is "iic_init.v".
+    Found finite state machine <FSM_0> for signal <c_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 001                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <Done>.
+    Found 32-bit up counter for signal <bit_count>.
+    Found 12-bit up counter for signal <cycle_count>.
+    Found 1-bit register for signal <SCL_out>.
+    Found 28-bit register for signal <SDA_BUFFER>.
+    Found 1-bit register for signal <SDA_out>.
+    Found 5-bit up counter for signal <write_count>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred  31 D-type flip-flop(s).
+Unit <iic_init> synthesized.
+
+
+Synthesizing Unit <ml505_top>.
+    Related source file is "ml505_top.v".
+WARNING:Xst:646 - Signal <pll_lock> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ml505_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 31
+ 1-bit register                                        : 31
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <init/c_state/FSM> on signal <c_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 001
+ 001   | 000
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+-------------------
+WARNING:Xst:1710 - FF/Latch <SDA_BUFFER_0> (without init value) has a constant value of 0 in block <init>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <SDA_BUFFER_0> (without init value) has a constant value of 0 in block <iic_init>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance user_clk_pll in unit ml505_top of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <ml505_top> ...
+
+Optimizing unit <iic_init> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ml505_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ml505_top.ngr
+Top Level Output File Name         : ml505_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 300
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 63
+#      LUT2                        : 5
+#      LUT3                        : 11
+#      LUT4                        : 23
+#      LUT5                        : 16
+#      LUT6                        : 47
+#      MUXCY                       : 63
+#      VCC                         : 1
+#      XORCY                       : 66
+# FlipFlops/Latches                : 104
+#      FD                          : 12
+#      FDR                         : 26
+#      FDRE                        : 51
+#      FDS                         : 2
+#      FDSE                        : 13
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 5
+#      IBUFG                       : 1
+#      OBUF                        : 4
+# Others                           : 1
+#      PLL_ADV                     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             104  out of  69120     0%  
+ Number of Slice LUTs:                  169  out of  69120     0%  
+    Number used as Logic:               169  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    169
+   Number with an unused Flip Flop:      65  out of    169    38%  
+   Number with an unused LUT:             0  out of    169     0%  
+   Number of fully used LUT-FF pairs:   104  out of    169    61%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    640     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of PLL_ADVs:                      1  out of      6    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cpu_clk                            | BUFG                   | 22    |
+VGA_IN_DATA_CLK                    | BUFGP                  | 82    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.398ns (Maximum Frequency: 294.291MHz)
+   Minimum input arrival time before clock: 2.907ns
+   Maximum output required time after clock: 5.509ns
+   Maximum combinational path delay: 1.154ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpu_clk'
+  Clock period: 2.299ns (frequency: 434.972MHz)
+  Total number of paths / destination ports: 253 / 22
+-------------------------------------------------------------------------
+Delay:               2.299ns (Levels of Logic = 23)
+  Source:            rst_parse/count_0 (FF)
+  Destination:       rst_parse/count_21 (FF)
+  Source Clock:      cpu_clk rising
+  Destination Clock: cpu_clk rising
+
+  Data Path: rst_parse/count_0 to rst_parse/count_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  rst_parse/count_0 (rst_parse/count_0)
+     INV:I->O              1   0.238   0.000  rst_parse/Mcount_count_lut<0>_INV_0 (rst_parse/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  rst_parse/Mcount_count_cy<0> (rst_parse/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<1> (rst_parse/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<2> (rst_parse/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<3> (rst_parse/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<4> (rst_parse/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<5> (rst_parse/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<6> (rst_parse/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<7> (rst_parse/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<8> (rst_parse/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<9> (rst_parse/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<10> (rst_parse/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<11> (rst_parse/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<12> (rst_parse/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<13> (rst_parse/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<14> (rst_parse/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<15> (rst_parse/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<16> (rst_parse/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<17> (rst_parse/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<18> (rst_parse/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.026   0.000  rst_parse/Mcount_count_cy<19> (rst_parse/Mcount_count_cy<19>)
+     MUXCY:CI->O           0   0.026   0.000  rst_parse/Mcount_count_cy<20> (rst_parse/Mcount_count_cy<20>)
+     XORCY:CI->O           1   0.357   0.000  rst_parse/Mcount_count_xor<21> (Result<21>)
+     FDR:D                    -0.018          rst_parse/count_21
+    ----------------------------------------
+    Total                      2.299ns (1.958ns logic, 0.341ns route)
+                                       (85.2% logic, 14.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_IN_DATA_CLK'
+  Clock period: 3.398ns (frequency: 294.291MHz)
+  Total number of paths / destination ports: 2566 / 180
+-------------------------------------------------------------------------
+Delay:               3.398ns (Levels of Logic = 3)
+  Source:            init/bit_count_16 (FF)
+  Destination:       init/SDA_out (FF)
+  Source Clock:      VGA_IN_DATA_CLK rising
+  Destination Clock: VGA_IN_DATA_CLK rising
+
+  Data Path: init/bit_count_16 to init/SDA_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.471   1.074  init/bit_count_16 (init/bit_count_16)
+     LUT6:I0->O            5   0.094   1.091  init/c_state_cmp_eq0000108 (init/c_state_cmp_eq0000108)
+     LUT6:I0->O            1   0.094   0.480  init/SDA_out_and000049 (init/SDA_out_and0000)
+     LUT6:I5->O            1   0.094   0.000  init/SDA_out_rstpot (init/SDA_out_rstpot)
+     FDS:D                    -0.018          init/SDA_out
+    ----------------------------------------
+    Total                      3.398ns (0.753ns logic, 2.645ns route)
+                                       (22.2% logic, 77.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_clk'
+  Total number of paths / destination ports: 110 / 22
+-------------------------------------------------------------------------
+Offset:              2.907ns (Levels of Logic = 2)
+  Source:            GPIO_COMPSW<2> (PAD)
+  Destination:       rst_parse/count_0 (FF)
+  Destination Clock: cpu_clk rising
+
+  Data Path: GPIO_COMPSW<2> to rst_parse/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.818   0.973  GPIO_COMPSW_2_IBUF (GPIO_COMPSW_2_IBUF)
+     LUT5:I0->O           22   0.094   0.449  _or0000_inv1 (_or0000_inv)
+     FDR:R                     0.573          rst_parse/count_0
+    ----------------------------------------
+    Total                      2.907ns (1.485ns logic, 1.422ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_IN_DATA_CLK'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.270ns (Levels of Logic = 1)
+  Source:            init/SCL_out (FF)
+  Destination:       IIC_SCL_VIDEO (PAD)
+  Source Clock:      VGA_IN_DATA_CLK rising
+
+  Data Path: init/SCL_out to IIC_SCL_VIDEO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.471   0.347  init/SCL_out (init/SCL_out)
+     OBUF:I->O                 2.452          IIC_SCL_VIDEO_OBUF (IIC_SCL_VIDEO)
+    ----------------------------------------
+    Total                      3.270ns (2.923ns logic, 0.347ns route)
+                                       (89.4% logic, 10.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpu_clk'
+  Total number of paths / destination ports: 22 / 1
+-------------------------------------------------------------------------
+Offset:              5.509ns (Levels of Logic = 3)
+  Source:            rst_parse/count_4 (FF)
+  Destination:       GPIO_LED<1> (PAD)
+  Source Clock:      cpu_clk rising
+
+  Data Path: rst_parse/count_4 to GPIO_LED<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   1.074  rst_parse/count_4 (rst_parse/count_4)
+     LUT6:I0->O           14   0.094   0.860  rst_parse/out10 (rst_parse/out10)
+     LUT4:I0->O           38   0.094   0.464  rst_parse/out68 (GPIO_LED_1_OBUF)
+     OBUF:I->O                 2.452          GPIO_LED_1_OBUF (GPIO_LED<1>)
+    ----------------------------------------
+    Total                      5.509ns (3.111ns logic, 2.398ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.154ns (Levels of Logic = 1)
+  Source:            USER_CLK (PAD)
+  Destination:       user_clk_pll:CLKIN1 (PAD)
+
+  Data Path: USER_CLK to user_clk_pll:CLKIN1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O            1   0.818   0.336  user_clk_buf (user_clk_g)
+    PLL_ADV:CLKIN1             0.000          user_clk_pll
+    ----------------------------------------
+    Total                      1.154ns (0.818ns logic, 0.336ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.26 secs
+ 
+--> 
+
+
+Total memory usage is 565000 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

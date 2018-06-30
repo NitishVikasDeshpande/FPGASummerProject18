@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/apurvan/Projects/FinalCodes/AD9980Initialize/ml505_top.xst" -ofn "/home/apurvan/Projects/FinalCodes/AD9980Initialize/ml505_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 ml505_top.ngc ml505_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o ml505_top_map.ncd ml505_top.ngd ml505_top.pcf 
+par -w -intstyle ise -ol high -mt off ml505_top_map.ncd ml505_top.ncd ml505_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ml505_top.twx ml505_top.ncd -o ml505_top.twr ml505_top.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f ml505_top.ut ml505_top.ncd 

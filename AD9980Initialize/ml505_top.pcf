@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Jun 30 04:10:27 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "GPIO_COMPSW<4>" LOCATE = SITE "AJ7" LEVEL 1;
+COMP "GPIO_LED<0>" LOCATE = SITE "H18" LEVEL 1;
+COMP "GPIO_LED<1>" LOCATE = SITE "L18" LEVEL 1;
+COMP "IIC_SCL_VIDEO" LOCATE = SITE "U27" LEVEL 1;
+COMP "USER_CLK" LOCATE = SITE "AH15" LEVEL 1;
+COMP "IIC_SDA_VIDEO" LOCATE = SITE "T29" LEVEL 1;
+COMP "VGA_IN_DATA_CLK" LOCATE = SITE "AH18" LEVEL 1;
+COMP "GPIO_COMPSW<0>" LOCATE = SITE "AJ6" LEVEL 1;
+COMP "GPIO_COMPSW<1>" LOCATE = SITE "AK7" LEVEL 1;
+COMP "GPIO_COMPSW<2>" LOCATE = SITE "U8" LEVEL 1;
+COMP "GPIO_COMPSW<3>" LOCATE = SITE "V8" LEVEL 1;
+TIMEGRP cpu_clk = BEL "rst_parse/count_0" BEL "rst_parse/count_1" BEL
+        "rst_parse/count_2" BEL "rst_parse/count_3" BEL "rst_parse/count_4"
+        BEL "rst_parse/count_5" BEL "rst_parse/count_6" BEL
+        "rst_parse/count_7" BEL "rst_parse/count_8" BEL "rst_parse/count_9"
+        BEL "rst_parse/count_10" BEL "rst_parse/count_11" BEL
+        "rst_parse/count_12" BEL "rst_parse/count_13" BEL "rst_parse/count_14"
+        BEL "rst_parse/count_15" BEL "rst_parse/count_16" BEL
+        "rst_parse/count_17" BEL "rst_parse/count_18" BEL "rst_parse/count_19"
+        BEL "rst_parse/count_20" BEL "rst_parse/count_21" BEL "cpu_clk_buf";
+PIN user_clk_pll_pins<2> = BEL "user_clk_pll" PINNAME CLKIN1;
+TIMEGRP USER_CLK = PIN "user_clk_pll_pins<2>";
+TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 10 ns HIGH 50%;
+TS_cpu_clk = PERIOD TIMEGRP "cpu_clk" TS_USER_CLK / 0.75 HIGH 50%;
+SCHEMATIC END;
+

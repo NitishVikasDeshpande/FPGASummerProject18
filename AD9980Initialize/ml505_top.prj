@@ -1,0 +1,3 @@
+verilog work "iic_init.v"
+verilog work "Debouncer.v"
+verilog work "ml505_top.v"
